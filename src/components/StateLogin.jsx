@@ -1,18 +1,21 @@
-import { useRef } from 'react';
+import { useState } from 'react';
 
 export default function Login() {
-  // requires less code than useState
-  // resetting values is harder. Discouraged from using refs to manipulate DOM
-  const email = useRef();
-  const password = useRef();
+  const [enteredValues, setEnteredValues] = useState({
+    email: '',
+    password: ''
+  });
 
   function handleSubmit(event) {
     event.preventDefault();
-    
-    const enteredEmail = email.current.value;
-    const enteredPassword = password.current.value;
+    console.log('Submitted', enteredValues);
+  }
 
-    console.log(enteredEmail, enteredPassword);
+  function handleInput(identifier, value) {
+    setEnteredValues(prevState => ({
+      ...prevState,
+      [identifier]: value
+    }))
   }
 
   return (
@@ -26,8 +29,8 @@ export default function Login() {
             id="email" 
             type="email" 
             name="email" 
-            ref={email}
-          />
+            value={enteredValues.email} 
+            onChange={(event) => {handleInput('email', event.target.value)}}/>
         </div>
 
         <div className="control no-margin">
@@ -36,8 +39,8 @@ export default function Login() {
             id="password" 
             type="password" 
             name="password" 
-            ref={password}
-          />
+            value={enteredValues.password} 
+            onChange={(event) => {handleInput('password', event.target.value)}}/>
         </div>
       </div>
 
