@@ -13,6 +13,7 @@ export default function Login() {
     const enteredPassword = password.current.value;
 
     console.log(enteredEmail, enteredPassword);
+    //email.current.value = ''; // should let React manipulate DOM
   }
 
   return (
