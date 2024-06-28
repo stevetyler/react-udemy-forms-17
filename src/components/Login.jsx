@@ -1,6 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Login() {
+  const [emailIsInvalid, setEmailIsInvalid] = useState(false);
   // requires less code than useState
   // resetting values is harder. Discouraged from using refs to manipulate DOM
   const email = useRef();
@@ -14,10 +15,19 @@ export default function Login() {
 
     console.log(enteredEmail, enteredPassword);
     //email.current.value = ''; // should let React manipulate DOM
+    const emailIsValid = enteredEmail.includes('@');
+
+    if(!emailIsValid) {
+      setEmailIsInvalid(true);
+      return;
+    }
+
+    setEmailIsInvalid(false);
+    console.log('Sending HTTP request...');
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} noValidate>
       <h2>Login</h2>
 
       <div className="control-row">
@@ -29,6 +39,9 @@ export default function Login() {
             name="email" 
             ref={email}
           />
+          <div className="control-error">
+            {emailIsInvalid && <p>Please enter a valid email address</p>}
+          </div>
         </div>
 
         <div className="control no-margin">
