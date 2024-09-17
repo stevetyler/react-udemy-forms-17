@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 export default function Signup() {
     const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -15,7 +16,8 @@ export default function Signup() {
           setPasswordsAreNotEqual(true);
           return;
         }
-        console.log(data);
+        setIsSubmitted(true);
+        setPasswordsAreNotEqual(false);
         e.target.reset(); 
     }
 
@@ -123,6 +125,8 @@ export default function Signup() {
             Sign up
           </button>
         </p>
+
+        {isSubmitted && <p>Thank you for signing up! 🎉</p>}
       </form>
     );
   }
