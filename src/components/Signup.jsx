@@ -16,6 +16,7 @@ export default function Signup() {
           return;
         }
         console.log(data);
+        e.target.reset(); 
     }
 
     return (

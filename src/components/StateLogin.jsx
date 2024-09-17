@@ -24,7 +24,7 @@ export default function Login() {
     if (emailHasError || passwordHasError) {
       return;
     }
-    console.log(emailValue, passwordValue);
+    console.log('state login', emailValue, passwordValue);
   }
 
   return (

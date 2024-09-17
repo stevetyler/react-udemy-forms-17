@@ -42,7 +42,7 @@ form {
   max-width: 40rem;
   margin: 3rem auto;
   padding: 2rem;
-  background: linear-gradient(180deg, #253c3c, #1d4949);
+  background: linear-gradient(180deg, #0b2750, #021838);
   border-radius: 8px;
   box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
 }
@@ -60,7 +60,7 @@ fieldset {
   display: block;
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
-  color: #9bafaf;
+  color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -72,9 +72,9 @@ fieldset {
   padding: 0.5rem;
   font-size: 1rem;
   border-radius: 4px;
-  border: 1px solid #758a8a;
-  background-color: #869999;
-  color: #142020;
+  border: 1px solid #021838;
+  background-color: #bec0c4;
+  color: #000000;
 }
 
 .control select {
@@ -85,7 +85,7 @@ fieldset {
   font-size: 1rem;
   border-radius: 4px;
   border: 1px solid #758a8a;
-  background-color: #869999;
+  background-color: #bec0c4;
   color: #142020;
 }
 
@@ -138,23 +138,23 @@ fieldset {
   font-size: 1rem;
   border-radius: 4px;
   border: none;
-  background-color: #147b73;
+  background-color: #3166b6;
   color: #d9e2f1;
   cursor: pointer;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #319890;
+  background-color: #021838;
 }
 
 .button-flat {
   background-color: transparent;
-  color: #9cbaba;
+  color: #ffffff;
 }
 
 .button-flat:hover,
 .button-flat:focus {
   background-color: transparent;
-  color: #869999;
+  color: #ffffff;
 }
