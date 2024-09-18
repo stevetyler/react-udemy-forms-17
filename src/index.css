@@ -9,12 +9,13 @@ body {
   font-family: 'Lato', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#d0d6d9, #b1b4ba);
-  color: #d9e2f1;
+  /* color: #d9e2f1; */
   min-height: 100vh;
 }
 
-header {
+
+
+/* header {
   margin: 2rem 0;
   text-align: center;
 }
@@ -35,7 +36,7 @@ header h1 {
   margin: 1rem 0;
   letter-spacing: 0.2rem;
   color: #2f4444;
-}
+} */
 
 form {
   width: 90%;
