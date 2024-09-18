@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Signup() {
     const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -79,34 +79,6 @@ export default function Signup() {
           </select>
         </div>
   
-        <fieldset>
-          <legend>How did you find us?</legend>
-          <div className="control">
-            <input
-              type="checkbox"
-              id="google"
-              name="acquisition"
-              value="google"
-            />
-            <label htmlFor="google">Google</label>
-          </div>
-  
-          <div className="control">
-            <input
-              type="checkbox"
-              id="friend"
-              name="acquisition"
-              value="friend"
-            />
-            <label htmlFor="friend">Referred by friend</label>
-          </div>
-  
-          <div className="control">
-            <input type="checkbox" id="other" name="acquisition" value="other" />
-            <label htmlFor="other">Other</label>
-          </div>
-        </fieldset>
-  
         <div className="control">
           <label htmlFor="terms-and-conditions">
             <input type="checkbox" id="terms-and-conditions" name="terms" required/>I
@@ -123,7 +95,6 @@ export default function Signup() {
           </button>
         </p>
 
-        {isSubmitted && <p>Thank you for signing up! 🎉</p>}
       </form>
     );
   }
