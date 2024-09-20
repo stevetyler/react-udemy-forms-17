@@ -7,9 +7,9 @@ export default function Signup() {
     function handleSubmit(e) {
         e.preventDefault();
 
-        const formData = new FormData(e.target); // needs name prop
-        const data = Object.fromEntries(formData.entries()); // entries gives array of all input fields and values. 
-        const acquisitionChannel = formData.getAll('acquisition'); // prop has multiple values and are lost using entries()
+        const formData = new FormData(e.target); 
+        const data = Object.fromEntries(formData.entries()); 
+        const acquisitionChannel = formData.getAll('acquisition'); 
         data.acquisition = acquisitionChannel;
         
         if (data.password !== data['confirm-password']) {
