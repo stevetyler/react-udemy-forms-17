@@ -16,7 +16,7 @@ export default function Signup() {
           setPasswordsAreNotEqual(true);
           return;
         }
-        setIsSubmitted(true);
+
         setPasswordsAreNotEqual(false);
         e.target.reset(); 
     }
